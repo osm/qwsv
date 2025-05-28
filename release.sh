@@ -1,0 +1,85 @@
+#!/usr/bin/env bash
+
+if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ] || [ -z "$5" ] || [ -z "$6" ]; then
+	echo "usage: <base dir> <version> <repo:branch:id> <repo:branch:id> <repo:branch:id> <repo:branch:id>"
+	exit
+fi
+
+base_dir="$1"
+version="v$2"
+
+targets=(freebsd-amd64 linux-amd64 linux-arm64)
+
+output_dir="/tmp/qwsv-$version"
+output_artifacts="$output_dir/artifacts.txt"
+
+download_artifacts() {
+	repo="$(echo $1 | cut -d: -f1)"
+	branch="$(echo $1 | cut -d: -f2)"
+	id="$(echo $1 | cut -d: -f3)"
+
+	echo $1 >>$output_artifacts
+
+	if [ ! -d "$base_dir/$repo" ]; then
+		echo "error: $base_dir/$repo doesn't exist" >&2
+		exit 1
+	fi
+
+	if [ "$repo" = "mvdsv" ] && [ "$branch" = "master" ]; then
+		art="mvdsv"
+		dl_file="mvdsv"
+		perm="755"
+		output_file="mvdsv"
+	elif [ "$repo" = "mvdsv" ] && [ "$branch" = "antilag" ]; then
+		art="mvdsv-antilag"
+		dl_file="mvdsv"
+		perm="755"
+		output_file="mvdsv-antilag"
+	elif [ "$repo" = "ktx" ] && [ "$branch" = "master" ]; then
+		art="qwprogs"
+		dl_file="qwprogs.so"
+		perm="644"
+		output_file="qwprogs.so"
+	elif [ "$repo" = "ktx" ] && [ "$branch" = "antilag" ]; then
+		art="qwprogs-antilag"
+		dl_file="qwprogs.so"
+		perm="644"
+		output_file="qwprogs-antilag.so"
+	else
+		echo "error: unknown repo and/or branch: $repo/$branch" >&2
+		exit 1
+	fi
+
+	pushd "$base_dir/$repo" >/dev/null
+
+	NO_COLOR=1 gh run list --json databaseId,headBranch --limit 20 \
+		| jq -e --argjson id "$id" --arg branch "$branch" \
+		'.[] | select(.databaseId == $id and .headBranch == $branch)' >/dev/null
+	if [ $? -ne 0 ]; then
+		echo "error: run with id=$id and branch=$branch not found in $repo" >&2
+		exit 1
+	fi
+
+	for target in "${targets[@]}"; do
+		rm -f "$dl_file"
+		gh run download "$id" -n "$art-$target"
+		chmod "$perm" "$dl_file"
+		mv "$dl_file" "$output_dir/$target-$output_file"
+	done
+
+	popd >/dev/null
+}
+
+rm -rf $output_dir
+mkdir -p $output_dir
+
+download_artifacts $3
+download_artifacts $4
+download_artifacts $5
+download_artifacts $6
+
+cp README.md $output_dir
+cp CHANGELOG.md $output_dir
+
+tar cfz qwsv-$version.tar.gz -C $(dirname $output_dir) $(basename $output_dir)
+rm -rf $output_dir
