@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 
-if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ] || [ -z "$4" ] || [ -z "$5" ] || [ -z "$6" ]; then
-	echo "usage: <base dir> <version> <repo:branch:id> <repo:branch:id> <repo:branch:id> <repo:branch:id>"
+if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
+	echo "usage: <base dir> <version> <changelog>"
 	exit
 fi
 
 base_dir="$1"
-version="v$2"
+version="$2"
+changelog="$3"
 
 targets=(freebsd-amd64 linux-amd64 linux-arm64)
 
-output_dir="/tmp/qwsv-$version"
+output_dir="/tmp/qwsv-v$version"
 output_artifacts="$output_dir/artifacts.txt"
 
 download_artifacts() {
@@ -45,6 +46,11 @@ download_artifacts() {
 		dl_file="qwprogs.so"
 		perm="644"
 		output_file="qwprogs-antilag.so"
+	elif [ "$repo" = "qwfwd" ] && [ "$branch" = "master" ]; then
+		art="qwfwd"
+		dl_file="qwfwd"
+		perm="755"
+		output_file="qwfwd"
 	else
 		echo "error: unknown repo and/or branch: $repo/$branch" >&2
 		exit 1
@@ -70,16 +76,57 @@ download_artifacts() {
 	popd >/dev/null
 }
 
+if [ ! -f "$changelog" ]; then
+	echo "error: unable to find $changelog" >&2
+	exit 1
+fi
+
+artifacts=()
+in_version=0
+in_section=0
+
+while IFS= read -r line; do
+	if [[ "$line" =~ ^##\ \[$version\] ]]; then
+		in_version=1
+		continue
+	fi
+
+	if [[ $in_version -eq 1 && "$line" =~ ^##\  ]]; then
+		break
+	fi
+
+	if [[ $in_version -eq 1 && $in_section -eq 0 && "$line" == "### Built Artifacts" ]]; then
+		in_section=1
+		continue
+	fi
+
+	if [[ $in_section -eq 1 ]]; then
+		if [[ "$line" =~ ^###\  ]]; then
+			break
+		fi
+
+		if [[ "$line" =~ ^-\ \`(.+)\`$ ]]; then
+			artifact="${line#- \`}"
+			artifact="${artifact%\`}"
+			artifacts+=("$artifact")
+		fi
+	fi
+done < "$changelog"
+
+if [ ${#artifacts[@]} -eq 0 ]; then
+	echo "error: no artifacts found for version: $version" >&2
+	exit 1
+fi
+
 rm -rf $output_dir
 mkdir -p $output_dir
 
-download_artifacts $3
-download_artifacts $4
-download_artifacts $5
-download_artifacts $6
+for artifact in "${artifacts[@]}"; do
+	download_artifacts $artifact
+done
 
 cp README.md $output_dir
 cp CHANGELOG.md $output_dir
 
-tar cfz qwsv-$version.tar.gz -C $(dirname $output_dir) $(basename $output_dir)
+tar cfz qwsv-v$version.tar.gz -C $(dirname $output_dir) $(basename $output_dir)
 rm -rf $output_dir
