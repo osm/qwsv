@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.1.0] – 2025-05-29
+
+### Built Artifacts
+
+- `ktx:antilag:15330899554`
+- `ktx:master:15330686303`
+- `mvdsv:antilag:15307230532`
+- `mvdsv:master:15307236508`
+- `qwfwd:master:15328738480`
+
+### KTX
+
+#### Additional Changes
+
+- Fixed SSG KILL stats
+
+### QWFWD
+
+#### Upstream Sources
+
+- QW-Group master: `40bce14` - Merge pull request #19 from osm/add-whitelist
+
+#### Additional Changes
+
+- Added configuration reload on SIGHUP
+
 ## [1.0.0] – 2025-05-28
 
 ### Built Artifacts
