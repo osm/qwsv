@@ -1,4 +1,4 @@
 # qwsv
 
-QuakeWorld server bundle containing MVDSV and KTX for various architectures
-and operating systems.
+QuakeWorld server bundle containing MVDSV, KTX, and QWFWD for various
+architectures and operating systems.
