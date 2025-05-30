@@ -1,5 +1,34 @@
 # Changelog
 
+## [1.2.0] – 2025-05-30
+
+### Built Artifacts
+
+- `ktx:antilag:15352802595`
+- `ktx:master:15330686303`
+- `mvdsv:antilag:15352789206`
+- `mvdsv:master:15307236508`
+- `qwfwd:master:15328738480`
+- `qtv-go:master:15352711992`
+
+### KTX
+
+#### Upstream Sources
+
+- Dusty al-merge-2: `dc442cc` - Merge remote-tracking branch 'upstream/master' into al-merge-2
+
+### MVDSV
+
+#### Upstream Sources
+
+- Dusty master: `b075a6a` - Merge remote-tracking branch 'upstream/master'
+
+### QTV-GO
+
+#### Upstream Sources
+
+- QW-Group master: `2834c79` - IO: URI decode path when opening file for streaming (#11)
+
 ## [1.1.0] – 2025-05-29
 
 ### Built Artifacts
