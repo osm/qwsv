@@ -51,6 +51,11 @@ download_artifacts() {
 		dl_file="qwfwd"
 		perm="755"
 		output_file="qwfwd"
+	elif [ "$repo" = "qtv-go" ] && [ "$branch" = "master" ]; then
+		art="qtv-go"
+		dl_file="qtv-go"
+		perm="755"
+		output_file="qtv-go"
 	else
 		echo "error: unknown repo and/or branch: $repo/$branch" >&2
 		exit 1
