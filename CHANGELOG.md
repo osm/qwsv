@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.2.1] – 2025-06-04
+
+### Built Artifacts
+
+- `ktx:antilag:15352802595`
+- `ktx:master:15330686303`
+- `mvdsv:antilag:15433643656`
+- `mvdsv:master:15433640837`
+- `qwfwd:master:15328738480`
+- `qtv-go:master:15352711992`
+
+### MVDSV
+
+#### Additional Changes
+
+- Flush broadcast cache after printing.
+
 ## [1.2.0] – 2025-05-30
 
 ### Built Artifacts
