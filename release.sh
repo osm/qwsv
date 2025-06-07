@@ -9,7 +9,7 @@ base_dir="$1"
 version="$2"
 changelog="$3"
 
-targets=(freebsd-amd64 linux-amd64 linux-arm64)
+targets=(freebsd-amd64 linux-amd64 linux-arm64 openbsd-amd64)
 
 output_dir="/tmp/qwsv-v$version"
 output_artifacts="$output_dir/artifacts.txt"
