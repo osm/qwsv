@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.3.0] – 2025-06-07
+
+### Built Artifacts
+
+- `ktx:antilag:15508475865`
+- `ktx:master:15508475395`
+- `mvdsv:antilag:15507820637`
+- `mvdsv:master:15507817960`
+- `qwfwd:master:15508519063`
+- `qtv-go:master:15508500512`
+
+### Additional Changes
+
+- Add OpenBSD binaries
+
 ## [1.2.1] – 2025-06-04
 
 ### Built Artifacts
