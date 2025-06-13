@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.3.1] – 2025-06-13
+
+### Built Artifacts
+
+- `ktx:antilag:15508475865`
+- `ktx:master:15508475395`
+- `mvdsv:antilag:15638476358`
+- `mvdsv:master:15638350046`
+- `qwfwd:master:15508519063`
+- `qtv-go:master:15508500512`
+
+### MVDSV
+
+#### Additional Changes
+
+- Comply with POSIX thread ownership.
+- Fix broadcast cache and log entry conditions
+
 ## [1.3.0] – 2025-06-07
 
 ### Built Artifacts
