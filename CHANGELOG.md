@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.3.2] – 2025-06-13
+
+### Built Artifacts
+
+- `ktx:antilag:15508475865`
+- `ktx:master:15508475395`
+- `mvdsv:antilag:15640000782`
+- `mvdsv:master:15639997977`
+- `qwfwd:master:15508519063`
+- `qtv-go:master:15508500512`
+
+### MVDSV
+
+#### Additional Changes
+
+- Only add to broadcast cache when game has started
+
 ## [1.3.1] – 2025-06-13
 
 ### Built Artifacts
