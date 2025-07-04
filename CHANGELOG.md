@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.4.0] – 2025-07-04
+
+### Built Artifacts
+
+- `ktx:antilag:16078030971`
+- `ktx:master:16078028462`
+- `mvdsv:antilag:15640000782`
+- `mvdsv:master:15639997977`
+- `qwfwd:master:15508519063`
+- `qtv-go:master:15508500512`
+
+### KTX
+
+#### Additional Changes
+
+- Add socd command to control SOCD detection
+
 ## [1.3.2] – 2025-06-13
 
 ### Built Artifacts
