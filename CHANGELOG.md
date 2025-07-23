@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.5.0] - 2025-07-23
+
+### Built Artifacts
+
+- `ktx:antilag:16078030971`
+- `ktx:master:16078028462`
+- `mvdsv:antilag:15640000782`
+- `mvdsv:master:15639997977`
+- `qwfwd:master:15508519063`
+- `qtv-go:master:16464930889`
+
+### QTV-GO
+
+#### Additional Changes
+
+- Use faithful naming scheme for resolving name collisions
+
+
 ## [1.4.0] – 2025-07-04
 
 ### Built Artifacts
