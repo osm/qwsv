@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.6.0] - 2025-08-28
+
+### Built Artifacts
+
+- `ktx:antilag:16078030971`
+- `ktx:master:16078028462`
+- `mvdsv:antilag:17300290872`
+- `mvdsv:master:17300293107`
+- `qwfwd:master:15508519063`
+- `qtv-go:master:16464930889`
+
+### MVDSV
+
+#### Additional Changes
+
+- Add player name to snap filename
+
+
 ## [1.5.0] - 2025-07-23
 
 ### Built Artifacts
