@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.7.0] - 2025-08-30
+
+### Built Artifacts
+
+- `ktx:antilag:17345888046`
+- `ktx:master:17345888646`
+- `mvdsv:antilag:17300290872`
+- `mvdsv:master:17300293107`
+- `qwfwd:master:15508519063`
+- `qtv-go:master:16464930889`
+
+### KTX
+
+#### Additional Changes
+
+- Add spawnicide
+- Add item pickup bonus for ToT mode
+
 ## [1.6.0] - 2025-08-28
 
 ### Built Artifacts
