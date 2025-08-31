@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.7.1] - 2025-08-31
+
+### Built Artifacts
+
+- `ktx:antilag:17357340584`
+- `ktx:master:17357339550`
+- `mvdsv:antilag:17300290872`
+- `mvdsv:master:17300293107`
+- `qwfwd:master:15508519063`
+- `qtv-go:master:16464930889`
+
+### KTX
+
+#### Additional Changes
+
+- Differ between spawnicide prewar and match
+
 ## [1.7.0] - 2025-08-30
 
 ### Built Artifacts
