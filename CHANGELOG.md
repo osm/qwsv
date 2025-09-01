@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.7.2] - 2025-09-01
+
+### Built Artifacts
+
+- `ktx:antilag:17380472868`
+- `ktx:master:17380465589`
+- `mvdsv:antilag:17300290872`
+- `mvdsv:master:17300293107`
+- `qwfwd:master:15508519063`
+- `qtv-go:master:16464930889`
+
+### KTX
+
+#### Additional Changes
+
+- Lock build to debian bookworm
+
 ## [1.7.1] - 2025-08-31
 
 ### Built Artifacts
