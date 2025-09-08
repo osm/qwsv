@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.8.0] - 2025-09-09
+
+### Built Artifacts
+
+- `ktx:master:17542626304`
+- `ktx:non-antilag:17542620479`
+- `mvdsv:master:17556997801`
+- `mvdsv:non-antilag:17557072005`
+- `qwfwd:master:17555148659`
+- `qtv-go:master:17555041781`
+
+### CHANGES
+
+- Use artifacts from https://github.com/QW-community
+
 ## [1.7.2] - 2025-09-01
 
 ### Built Artifacts
