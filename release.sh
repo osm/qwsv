@@ -9,7 +9,7 @@ base_dir="$1"
 version="$2"
 changelog="$3"
 
-targets=(freebsd-amd64 linux-amd64 linux-arm64 openbsd-amd64)
+targets=(freebsd-amd64 linux-amd64 linux-arm64)
 
 output_dir="/tmp/qwsv-v$version"
 output_artifacts="$output_dir/artifacts.txt"
@@ -30,22 +30,22 @@ download_artifacts() {
 		art="mvdsv"
 		dl_file="mvdsv"
 		perm="755"
-		output_file="mvdsv"
-	elif [ "$repo" = "mvdsv" ] && [ "$branch" = "antilag" ]; then
-		art="mvdsv-antilag"
+		output_file="mvdsv-antilag"
+	elif [ "$repo" = "mvdsv" ] && [ "$branch" = "non-antilag" ]; then
+		art="mvdsv-non-antilag"
 		dl_file="mvdsv"
 		perm="755"
-		output_file="mvdsv-antilag"
+		output_file="mvdsv"
 	elif [ "$repo" = "ktx" ] && [ "$branch" = "master" ]; then
 		art="qwprogs"
 		dl_file="qwprogs.so"
 		perm="644"
-		output_file="qwprogs.so"
-	elif [ "$repo" = "ktx" ] && [ "$branch" = "antilag" ]; then
-		art="qwprogs-antilag"
+		output_file="qwprogs-antilag.so"
+	elif [ "$repo" = "ktx" ] && [ "$branch" = "non-antilag" ]; then
+		art="qwprogs-non-antilag"
 		dl_file="qwprogs.so"
 		perm="644"
-		output_file="qwprogs-antilag.so"
+		output_file="qwprogs.so"
 	elif [ "$repo" = "qwfwd" ] && [ "$branch" = "master" ]; then
 		art="qwfwd"
 		dl_file="qwfwd"
