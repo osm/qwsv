@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.8.1] - 2025-09-14
+
+### Built Artifacts
+
+- `ktx:master:17708831632`
+- `ktx:non-antilag:17708829802`
+- `mvdsv:master:17556997801`
+- `mvdsv:non-antilag:17557072005`
+- `qwfwd:master:17555148659`
+- `qtv-go:master:17555041781`
+
+### KTX
+
+#### Additional Changes
+
+- BUG FIX: relink after player solid state changes
+
 ## [1.8.0] - 2025-09-09
 
 ### Built Artifacts
