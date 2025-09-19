@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.9.0] - 2025-09-19
+
+### Built Artifacts
+
+- `ktx:master:17866293114`
+- `ktx:non-antilag:17866300836`
+- `mvdsv:master:17556997801`
+- `mvdsv:non-antilag:17557072005`
+- `qwfwd:master:17555148659`
+- `qtv-go:master:17866315894`
+
+### KTX
+
+#### Additional Changes
+
+- Fix faulty condition introduced by item pickup bonus
+
+### QTV-GO
+
+- Conditionally prepend file hash to /demo_filenames response
+
 ## [1.8.1] - 2025-09-14
 
 ### Built Artifacts
