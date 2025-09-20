@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.9.1] - 2025-09-20
+
+### Built Artifacts
+
+- `ktx:master:17868712385`
+- `ktx:non-antilag:17868708661`
+- `mvdsv:master:17556997801`
+- `mvdsv:non-antilag:17557072005`
+- `qwfwd:master:17555148659`
+- `qtv-go:master:17866315894`
+
+### KTX
+
+#### Additional Changes
+
+- Make leavemealone toggleable
+- BUG FIX: add more s.v.solid change relinks
+
 ## [1.9.0] - 2025-09-19
 
 ### Built Artifacts
