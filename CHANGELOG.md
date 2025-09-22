@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.10.0] - 2025-09-22
+
+### Built Artifacts
+
+- `ktx:master:17924578169`
+- `ktx:non-antilag:17924574209`
+- `mvdsv:master:17556997801`
+- `mvdsv:non-antilag:17557072005`
+- `qwfwd:master:17555148659`
+- `qtv-go:master:17866315894`
+
+### KTX
+
+#### Additional Changes
+
+- Make easier bot skill toggleable
+
 ## [1.9.1] - 2025-09-20
 
 ### Built Artifacts
