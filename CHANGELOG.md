@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.11.0] - 2025-09-26
+
+### Built Artifacts
+
+- `ktx:master:17988250665`
+- `ktx:non-antilag:17988244948`
+- `mvdsv:master:17556997801`
+- `mvdsv:non-antilag:17557072005`
+- `qwfwd:master:17555148659`
+- `qtv-go:master:17866315894`
+
+### KTX
+
+#### Additional Changes
+
+- Allow pause without matchtag if k_pausewithoutmatchtag is set
+
 ## [1.10.0] - 2025-09-22
 
 ### Built Artifacts
