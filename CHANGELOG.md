@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.12.0] - 2025-10-01
+
+### Built Artifacts
+
+- `ktx:master:18141312298`
+- `ktx:non-antilag:18141308149`
+- `mvdsv:master:17556997801`
+- `mvdsv:non-antilag:17557072005`
+- `qwfwd:master:17555148659`
+- `qtv-go:master:18141322558`
+
+### KTX
+
+#### Additional Changes
+
+- Allow spawn markers to be shown during games
+
+### QTV-GO
+
+#### Additional Changes
+
+- fix(http): encode filenames for demo download redirect
+
 ## [1.11.0] - 2025-09-26
 
 ### Built Artifacts
