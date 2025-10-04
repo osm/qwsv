@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.13.0] - 2025-10-04
+
+### Built Artifacts
+
+- `ktx:master:18248067877`
+- `ktx:non-antilag:18248068675`
+- `mvdsv:master:17556997801`
+- `mvdsv:non-antilag:17557072005`
+- `qwfwd:master:17555148659`
+- `qtv-go:master:18141322558`
+
+### KTX
+
+#### Additional Changes
+
+- Add on_countdown_start and on_countdown_break events.
+
 ## [1.12.0] - 2025-10-01
 
 ### Built Artifacts
