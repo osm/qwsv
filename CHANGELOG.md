@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.14.0] - 2025-10-12
+
+### Built Artifacts
+
+- `ktx:master:18386050800`
+- `ktx:non-antilag:18386058253`
+- `mvdsv:master:17556997801`
+- `mvdsv:non-antilag:17557072005`
+- `qwfwd:master:17555148659`
+- `qtv-go:master:18141322558`
+
+### KTX
+
+#### Additional Changes
+
+- Add //ktx discharge event
+- Add E1M2 practice mode
+
 ## [1.13.0] - 2025-10-04
 
 ### Built Artifacts
