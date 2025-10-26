@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.15.0] - 2025-10-26
+
+### Built Artifacts
+
+- `ktx:master:18813714702`
+- `ktx:non-antilag:18813711609`
+- `mvdsv:master:17556997801`
+- `mvdsv:non-antilag:17557072005`
+- `qwfwd:master:17555148659`
+- `qtv-go:master:18141322558`
+
+### KTX
+
+#### Additional Changes
+
+- Make rpickup teams configurable
+
 ## [1.14.0] - 2025-10-12
 
 ### Built Artifacts
